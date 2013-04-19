@@ -1,0 +1,20 @@
+[
+{
+  "modid": "AT",
+  "name": "Advanced Technology",
+  "description": "Add new Technology to Minecraft",
+  "version": "0.0.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "CreeKsx3"
+  ],
+  "credits": "By CreeKsx3",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
