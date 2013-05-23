@@ -2,15 +2,16 @@
 {
   "modid": "AT",
   "name": "Advanced Technology",
-  "description": "Add new Technology to Minecraft",
+  "description": "This Mod adds new Technology to Minecraft.
+   Beacon :D",
   "version": "0.0.1",
   "url": "",
   "updateUrl": "",
   "authorList": [
-    "CreeKsx3"
+    "CreeKsx3",
   ],
   "credits": "By CreeKsx3",
-  "logoFile": "",
+  "logoFile": "/mods/at/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",
