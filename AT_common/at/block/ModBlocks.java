@@ -1,27 +1,37 @@
 package at.block;
 
-import at.lib.BlockIds;
-import at.lib.Strings;
-import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import at.lib.BlockIds;
+import at.lib.Strings;
 
 public class ModBlocks {
-
-    /* Mod block instances */
+    
+    
     public static Block titanOre;
     
-    public static void init() {
 
-        titanOre = new BlockTitanOre(BlockIds.TITAN_ORE);
+    public static void init(){
         
-        GameRegistry.registerBlock(titanOre, Strings.TITAN_ORE_NAME);
+        titanOre = new BlockTitanOre(BlockIds.titanOreID,Material.iron).setUnlocalizedName("tiletitanore");
+    
         
-        LanguageRegistry.addName(titanOre, "Titan Ore");
         
-        initBlockRecipes();
+        gameRegisters();
+        languageRegisters();
     }
-        
-        private static void initBlockRecipes() {
-        }
+    
+    
+    
+    private static void gameRegisters(){
+        GameRegistry.registerBlock(titanOre,Strings.TITAN_ORE_NAME);
+    }
+    
+    
+    
+    private static void languageRegisters(){
+        LanguageRegistry.addName(titanOre, "Titan Ore");
+    }
 }

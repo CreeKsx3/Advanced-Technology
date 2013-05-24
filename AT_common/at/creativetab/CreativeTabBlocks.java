@@ -5,21 +5,17 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class CreativeTabAT extends CreativeTabs {
+public class CreativeTabBlocks extends CreativeTabs{
 
-    public CreativeTabAT(int par1, String par2Str) {
-
+    public CreativeTabBlocks(int par1, String par2Str) {
         super(par1, par2Str);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    /**
-     * the itemID for the item to be displayed on the tab
-     */
-    public int getTabIconItemIndex() {
-
-        return BlockIds.TITAN_ORE;
+    
+    public int getTabIconItemIndex(){
+        
+        return BlockIds.titanOreID;
     }
-
 }

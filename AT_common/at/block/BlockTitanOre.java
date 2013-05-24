@@ -1,28 +1,31 @@
 package at.block;
 
+import java.util.Random;
+
 import at.AdvancedTechnology;
-import at.lib.Strings;
+
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.client.renderer.texture.IconRegister;
 
-public class BlockTitanOre extends BlockAT {
+public class BlockTitanOre extends Block {
 
-    public BlockTitanOre(int id) {
-        
-        super(id, Material.iron);
-        this.setUnlocalizedName(Strings.TITAN_ORE_NAME);
-        this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
-        this.setCreativeTab(AdvancedTechnology.tabsAT);
+    public BlockTitanOre(int id, Material mat) {
+        super(id, mat);
+        this.setCreativeTab(AdvancedTechnology.tabsBlocks);
+        this.setHardness(5.0f);
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world) {
-        return null;
+    public void registerIcons(IconRegister reg){
+        this.blockIcon = reg.registerIcon("at:TitanOre");
     }
-    @Override
-    public void breakBlock(World world, int x, int y, int z, int id, int meta) {
 
-        super.breakBlock(world, x, y, z, id, meta);
+    public int idDropped(int par1, Random rand, int par2){
+        return this.blockID;
+    }
+    
+    public int quantityDropped(Random rand){
+        return 1;
     }
 }
